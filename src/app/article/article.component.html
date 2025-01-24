@@ -1,13 +1,25 @@
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3">
     <div class="row g-0">
-      <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
+      <div class="col-md-1 p-2">
+        <img src="{{article.image}}" class="img-fluid rounded-start" >
       </div>
-      <div class="col-md-8">
+      <div class="col-md-11">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">{{article.title}} </h5>
+          <p class="card-text">{{article.description}} </p>
+
+         <div class="row">
+            <div class="col"> <b>{{article.category}} </b></div>
+
+            <div class="col">
+              <i class="text-succes" >{{article.rating.count}} en stock </i> <br>
+              <b>Note : 3.6 </b>
+            </div>
+              
+            <div class="col">
+              <h4 class="text-danger">{{article.price}}</h4> 
+            </div>
+         </div>
         </div>
       </div>
     </div>
