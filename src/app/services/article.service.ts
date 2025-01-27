@@ -16,4 +16,27 @@ export class ArticleService {
   getOne(id: number): Article | undefined{
     return this.articles.find(article=> this.articles,id==id)
   } 
+  store(
+    title:string,
+    category:string,
+    price:number,
+    description:string,
+    image:string,
+    rate:number,
+    count:number
+  ):void{
+    const article = {
+      id: this.articles.length +1,
+      title : title,
+      category : category,
+      price : price,
+      description : description,
+      image : image,
+      rating :{
+        rate : rate,
+        count: count
+      }
+    }
+    this.articles.unshift(article)
+  }
 }

@@ -1,1 +1,26 @@
-<p>create works!</p>
+<div class="container py-5">
+    <h1 class="my-5"> Enregistrez un article</h1>
+
+    <div ngIf ="isOpen" class="alert alert-succes alert-dismissible fade show" role="alert">
+       Enregistrement reussi
+        <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+            <form [formGroup] = "applyForm" (submit)="save()">
+                <p>Titre : <input type="text" formControlName="title" class="form-control" ></p>
+                <p> Categorie : <input type="text" formControlName="category" class="form-control" ></p>
+                <p> Prix: <input type="text" formControlName="price" class="form-control" ></p>
+                <p>Image : <input type="text" formControlName="image" class="form-control" ></p>
+                <p>Note : <input type="text" formControlName="note" class="form-control" ></p>
+                <p>Stock : <input type="text" formControlName="stock" class="form-control" > </p>
+                <p>Description <input type="text" formControlName="Description" class="form-control" ></p>
+                <p> <button type="button"></button></p>
+            </form>
+        </div>
+    </div>
+
+</div>
